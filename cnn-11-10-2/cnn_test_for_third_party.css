@@ -1,0 +1,45 @@
+/**************CNN  STYLINGS*****************************
+**HELPFUL_WEBSITES:**W3_SCHOOLS_CSS_SELECTOS***/
+
+/*TEST FOR ASKING QUESTIONS AND RECEIVING DATA */
+div[id="google_ads_iframe_/8663477/CNN/homepage_2__container__"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: blue !important;
+}
+
+.cd.cd--tool.cd--tool__webtag article {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: blue !important;
+}
+
+.column.zn__column--idx-5.column--top {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: blue !important;
+}
+
+.cn.cn-list-hierarchical-xs.cn--idx-5.cn-coverageContainer_B5ED9522-33C5-5FB3-7CEE-3E0FA1AA1D2B {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
+
+div[id="google_ads_iframe_/8663477/CNN/homepage_5__container__"] {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
+
+.l-footer__tools {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}

@@ -1,0 +1,160 @@
+function showInCenter(id) {
+   var winCenterX;
+   var winCenterY;
+   if (window.innerWidth) { //if browser supports window.innerWidth
+       winCenterX = window.innerWidth/2;
+       winCenterY  = window.innerHeight/2;
+   } else if (document.all) { //else if browser supports document.all (IE 4+)
+       winCenterX = document.body.clientWidth/2;
+       winCenterY = document.body.clientHeight/2;
+   }
+   var obj = $(id);
+   var objHeight = obj.style.height;
+   var objWidth  = obj.style.width;
+   //alert(objHeight+"  "+objWidth);
+   obj.style.top = (winCenterY-100) + 'px';
+   obj.style.left = (winCenterX-(objWidth/2)-100) + 'px';
+   setDisplay(id,'block');
+}
+
+function changeBgColor(obj, color) {
+  obj.style.backgroundColor = color;
+}
+function findPos(obj) {
+  var curleft = curtop = 0;
+  do {
+	 curleft += obj.offsetLeft;
+	   curtop += obj.offsetTop;
+  } while (obj = obj.offsetParent);
+  return [curleft,curtop];
+}
+function findPosById(objId) {
+  return findPos($(objId));
+}
+function showSubCat(obj, id) {
+  var leftOffSet = 155;
+  var dimension = findPos(obj);
+  var menu = $(id);
+  menu.style.top = (dimension[1]-2) + 'px';
+  menu.style.left = (dimension[0] + leftOffSet) + 'px';
+  setDisplay(id,'block');
+  showCatContent(id);
+  changeBgColor(obj, '#E9EAE7');
+  //obj.style.borderTopColor = '#000000';
+  //obj.style.borderTopWidth = 2;
+}
+function toggleItemBlock(oid){
+    var imageState = imgSwap(oid);
+	//alert(imageState);
+	if (imageState.endsWith("expand.gif")) {
+        //var now = new Date();
+		//alert("call");
+        //var myAjax = new Ajax.Updater(oid, '/include/cat'+oid+'.html', { method: 'get' });
+		showCatContent(oid);
+    }
+    toggleDisplay(oid);         
+}
+function validate(searchForm) {
+  //searchForm = document.getElementById('searchForm');
+  //var keywords = $('keywords');
+  var keywords = searchForm.keywords;
+  var sitesearch = $('sitesearch');
+  var selectedIndex = sitesearch.selectedIndex;
+  var target = sitesearch.options[selectedIndex].text;
+  //alert (target);
+  //alert ("["+keywords.value+"]");
+  if (keywords.value == "" || keywords.value == " " || keywords.value == "  " || keywords.value == "   ") {
+      if (target == "Book") {
+          alert("Please enter a search pattern in the title or author names of the books. \n\nYou may use Regular Expression to build patterns");
+	  } else {
+	      alert("Please enter search keywords or pattern");
+	  }
+      keywords.focus();
+      return false;
+  } 
+  //var searchForm = $('searchForm');
+  if (target == "Book") {
+	  //showInCenter('processing');
+	  setDisplay('processing','block');
+      searchForm.action = "/cgi-bin/searchBooks";
+	  searchForm.method = "post";
+	  searchForm.target = "_self";  
+  } else {
+      //searchForm.action = "http://www.google.com/custom";
+      searchForm.action = "/search.html";
+	  searchForm.method = "get";
+	  searchForm.target = "_self";
+	  searchForm.q.value = keywords.value;
+  }
+  return true;
+}
+function displayGoole() {
+  var sitesearch = $('sitesearch');
+  var selectedIndex = sitesearch.selectedIndex;
+  var target = sitesearch.options[selectedIndex].text;
+  if (target == "Book") {
+      setDisplay('google','none');
+  } else {
+      setDisplay('google','inline');
+  }
+}
+
+function ietruebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function ddrivetip(thetext, thecolor, thewidth){
+  if (ns6||ie){
+      if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px";
+      if (typeof thecolor!="undefined" && thecolor!="") 
+		  tipobj.style.backgroundColor=thecolor;
+      tipobj.innerHTML=thetext;
+      enabletip=true;
+      return false
+  }
+}
+
+function positiontip(e){
+  if (enabletip){
+      var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+      var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+	  //alert(curX+"   "+curY);
+      //Find out how close the mouse is to the corner of the window
+      var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+      var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+
+      var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+
+       //if the horizontal distance isn't enough to accomodate the width of the context menu
+      if (rightedge<tipobj.offsetWidth)
+          //move the horizontal position of the menu to the left by it's width
+          tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px";
+      else if (curX<leftedge)
+          tipobj.style.left="5px";
+      else
+          //position the horizontal position of the menu where the mouse is positioned
+          tipobj.style.left=curX+offsetxpoint+"px";
+
+      //tipobj.style.left="333px";
+     // alert(tipobj.style.left);
+      //same concept with the vertical position
+      if (bottomedge<tipobj.offsetHeight)
+          tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px";    
+      else
+         tipobj.style.top=curY+offsetypoint+"px";
+
+	 // alert(tipobj.style.top);
+      tipobj.style.visibility="visible"
+  }
+}
+
+function hideddrivetip(){
+  if (ns6||ie){
+      enabletip=false
+      tipobj.style.visibility="hidden";
+      tipobj.style.left="-1000px";
+	  //tipobj.style.left="500px";
+      tipobj.style.backgroundColor='';
+      tipobj.style.width='';
+  }
+}

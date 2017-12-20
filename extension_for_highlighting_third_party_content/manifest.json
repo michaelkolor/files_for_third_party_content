@@ -1,0 +1,22 @@
+{
+  "name": "Third Party Content Highlighter",
+  "version": "1.0",
+  "description": "Highlight the third-party content in CNN and Facebook's homepages",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_icon" : "icon.png",
+    "default_title" : "Third Party Content Highlighter!",
+    "default_popup" : "popup.html"
+  },
+  "permissions" : [
+    "declarativeContent",
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  "manifest_version": 2
+}

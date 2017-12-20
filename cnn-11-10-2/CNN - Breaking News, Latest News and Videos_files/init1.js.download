@@ -1,0 +1,19 @@
+//<script>
+bouncex.state = {"newvid":false,"iol":false,"tn":1510337917,"pvid":10,"rc":false,"mobile":false,"vip":"128.2.149.6","geo":{"country_code":"US","country_code3":"USA","country_name":"United States","region":"PA","city":"Pittsburgh","postal_code":"15213","latitude":40.4439,"longitude":-79.9561,"area_code":412,"dma_code":508,"metro_code":508,"continent_code":"NA","zip":"15213","country":"US","region_name":"Pennsylvania"}};
+bouncex.cookie = {"v":{"completed_signup":false},"sid":32,"fvt":1505402966,"vid":1510335760311901,"ao":8,"lp":"http%3A%2F%2Fwww.andrew.cmu.edu%2Fuser%2Fmkolor%2Ftest_website_mk%2Fcnn.html","as":0,"vpv":10,"d":"d","r":"","cvt":1510335760,"gcr":70,"m":0,"did":"2389447783304942535","lvt":1510337917,"campaigns":{"472439":{"lvt":1505402966,"lavid":1,"la":1509416617,"fsa":1509416617,"as":0,"ao":1},"474007":{"lvt":1510029408,"lavid":1,"la":1510029407,"fsa":1509416617,"as":1,"ao":2,"wc":1510029415},"578861":{"lvt":1507907398,"lavid":1,"la":1507907398,"fsa":1507130044,"as":1,"ao":2,"wc":1507130059},"588779":{"lvt":1510029406,"lavid":1,"la":1507763198,"fsa":1506102401,"as":2,"ao":2},"588781":{"lvt":1506102256,"lavid":1,"la":1507763198,"fsa":1506102401,"as":2,"ao":2},"589429":{"lvt":1510336107,"lavid":1,"la":1509416615,"fsa":1506702980,"as":2,"ao":2,"vv":1},"589431":{"lvt":1506022612,"lavid":1,"la":1509416615,"fsa":1506702980,"as":2,"ao":2,"vv":1},"597869":{"lvt":1509416595,"lavid":1},"603798":{"lvt":1510335824,"lavid":1,"la":1510242112,"fsa":1507833713,"as":0,"ao":7,"vv":2},"604748":{"lvt":1509416595,"lavid":1,"la":1510029407,"fsa":1510029407,"as":1,"ao":1},"605495":{"lvt":1510335824,"lavid":1,"vv":1},"610893":{"lvt":1509741692,"lavid":1,"la":1509741692,"fsa":1509741692,"as":1,"ao":1},"622139":{"lvt":1510335824,"lavid":1,"vv":2}}};
+bouncex.brandStyles = false;
+bouncex.webfonts = false;
+bouncex.campaigns = false;
+bouncex.gbi.stacks = false;
+bouncex.debug = false;
+
+
+bouncex.tryCatch(function(){
+	if(bouncex.browser.msie){
+		bouncex.setTimeout2(function(){
+			bouncex.init();
+		}, 0);
+	} else {
+		bouncex.init();
+	}
+})();

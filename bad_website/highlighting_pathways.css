@@ -1,0 +1,17 @@
+/**************CNN*****************************
+**HELPFUL_WEBSITES:**W3_SCHOOLS_CSS_SELECTOS***/
+
+/*TEST FOR ASKING QUESTIONS AND RECEIVING DATA  --> WHy is ldo_rate not working */
+[href*="sitemap.html"], [href*="unixCategory.html"],[href*="webJavaScriptBooks.html"],[href*="My Quick Converter.html"],[src*="fake_download_button_1.JPG"],[href*="webJavaScriptBooks.html"], [src*="ads_by_media.JPG"], [src*="ldo_rate.jpg"]{
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+/*HOVER AD EFFECT */
+[src*="ads_by_media.JPG"]:hover,[src*="fake_download_button_1.JPG"]:hover, [src*="ldo_rate.jpg"]:hover,[src*="fake_download_button_2.JPG"]:hover, [src*="https://tpc.googlesyndication.com/simgad/3730324607678836097"]:hover [src*="ldo_rate.jpg"]:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  cursor: pointer;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(1190)https://s.adroll.com/a/RM3/ML3/RM3ML3NOYNCXNHW6BBYLCQ/RM3ML3NOYNCXNHW6BBYLCQ.html?clickTag=http%3A%2F%2Fd.adroll.com%2Fr%2FISRFVJ4CYZEJLCRYPCOWW4%2FSV2SF2P76NFIPN7N5SDPHX%2Fc66805fb7e216b216a7d61a157ec4ebb.re%3Fadroll_height%3D250%26adroll_width%3D300%26site_url%3Dhttp%253A%2F%2Fcnn.com%26adroll_ad_payload%3D__HIAeABkwHaAc7IAcoAAbvHoMSyLcjX2NfH2M8_0s85ws8j3MzJKdLHOVBqm5unk7Gjb0Cob5SHV4RToG9gULCvd6DFNt9QjzD3oKjAYCcnRzfnkCCTMBPj4CCrcwwiRQk2G5NyEpOz45PyK-ILijKTM_PS7U7brYq8-figx1m344JM-_bfebL70LsVJ5fc-Xp1zst1rN6HYs4xMD_uLJ1VWqybmlhcomuYfKZzXUZJSYGVvn5yXp5ecn7umdnnoljfTD-zYDlMYBH7mSWOZ04tt0yxMDcyNjpz-jgby8RzDLKJE8-cAVozY8LdPedmNU5tg1lz5tdxXubGFallmSn5efElZ61mnPk7zUDP1MzM9Cyj8i0GZTPjZGPzVBNL0yST1DSTFOM0cyNTQyPj1FRzI0MzQzMzq8ycs4wqRCpkijjHwJRbcpYpcm1xYUFpenyZebx5vKHRWaaow2eZ4sBBdZYp9xyDd5DXWaaqc4wH-%2DrOMp24xaBgYW5glGKUZJhkappqmpJobmKRbGKebGlhaWlslmqUnHaW6fTylMq8xNzM5LNM5-4wCGfqGiSaWJiYmZtaJFumWRolJ1ueZfE5fJZ11eqi1JLEovTUEmAknGXLOKvtBgCs39nJU_WLjKHn-Yh2%26adroll_subnetwork%3Dr%26cpm%3DE2D6CCE27250A735%26adroll_network%3Dn%26clickurl%3Dhttp%253A%2F%2Fbeacon-nf.rubiconproject.com%2Fbeacon%2Frs%2Fa26d48be-4cc6-429d-9301-09b2e4b59ae4%2F0%2Fho-Aq8mnZzpYdlYgZLuEfM7cUkM%2F%253Furl%253D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>300x250_A2</title>
+<script> var clickTag="https://www.insightly.com/" </script>
+<script src="./createjs-2015.11.26.min.js.download"></script>
+<script src="./300x250_A2.js.download"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("632E1B6A35034DFF8AD5B71D125DC4F3");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib._300x250_A2();
+	stage = new lib.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:250px; cursor: pointer;">
+		<canvas id="canvas" width="375" height="312" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 300px; height: 250px;" onclick="window.open(window.clickTag)"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:250px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+<div onclick="javascript:window.open(decodeURIComponent(window.location.search.split(&#39;?&#39;)[1].split(&#39;=&#39;)[1]),&#39;_blank&#39;)" style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:16777271; cursor: pointer; cursor: hand;"></div>
+
+</body></html>

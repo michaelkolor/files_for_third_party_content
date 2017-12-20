@@ -1,0 +1,150 @@
+
+<!-- saved from url=(0019)http://www.cnn.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><script>var viewReq = new Array();function vu(u) {var i=new Image();i.src=u.replace("&amp;","&");viewReq.push(i);}</script><script>vu("https://securepubads.g.doubleclick.net/pcs/view?xai\x3dAKAOjssfpXlqbvbGXLjaAlCdEH1ErnEpCNLoa2otta7aLPIae_85a_a0hLBCdOSE2PYre7rTxRvq7BAs_vtNmvE8d0tLcIyCxnVPb6VyycsS_dGTNF5zcRczi4X2TDmtuzHMFitpsg9FrNSlf1m7Wm6JwwSZXuut5-nBpbjbH1RZfAMfYOJPqHFVjDwbth5KObyTeqANK4tbDNzIKhEeZrkFQvbvzOshLRr4K1Na4zplEss\x26sig\x3dCg0ArKJSzA3et1pQtjeZEAE\x26urlfix\x3d1\x26adurl\x3d")</script><script type="application/javascript">/*  - V.0.0.3 */
+
+    var creativeWidth = "728";
+    var creativeHeight = "90";
+    var htmlURL = "https://s.cdn.turner.com/ads/adspaces/CNN/2017/10/26/172179504/Apple_728x90_HTML/CNN_Apple_728x90_HTML.html";
+    var clickThru = "";
+    // If selected, a clickable overlay will be placed over the creative image.
+    // If the creative code includes a clickable element, this should be set to false.
+    var clickThruOverlay = "true";
+    if ("false" == "false") { clickThruOverlay = "false"; }
+    var resizeConatiner = false; //default the value to false so existing creatives are not impacted
+    if ("false" == "true") {resizeConatiner = true;}
+
+    var qa3PImpressions = ["", "", "", "", ""];
+    var qaImpTracker = "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssfpXlqbvbGXLjaAlCdEH1ErnEpCNLoa2otta7aLPIae_85a_a0hLBCdOSE2PYre7rTxRvq7BAs_vtNmvE8d0tLcIyCxnVPb6VyycsS_dGTNF5zcRczi4X2TDmtuzHMFitpsg9FrNSlf1m7Wm6JwwSZXuut5-nBpbjbH1RZfAMfYOJPqHFVjDwbth5KObyTeqANK4tbDNzIKhEeZrkFQvbvzOshLRr4K1Na4zplEss&sig=Cg0ArKJSzA3et1pQtjeZEAE&urlfix=1&adurl=";
+
+    var qaClickPixel = "https://s.cdn.turner.com/ads/1x1.gif";
+    var clickOverlay;
+
+    // create div for banner ad
+    var html5BannerDiv = document.createElement('div');
+
+    document.body.appendChild(html5BannerDiv);
+
+    // create an iframe and include the html file
+    var creativeIframe = document.createElement('iframe');
+
+    creativeIframe.setAttribute("src", htmlURL + '?clickMacro=https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsv9NhrL1zs5ftz6K-RuLF96H7i0LKie2Jw3sbj5f15_47VQo4XHA4nwaF59FaxIz5y5BdtOcbK1Bz5l0wvuu8DU2n4el6I0S1daglW9j1FvzOItztvYTnCu0yjRLWoONCfBED44AV8LG3IwJp7cJy_S9IwWtbCtvJFU7hWyRX2tBeAyGUtv23t9wtRyvdPR9j611TYZS3IdFISapok_7yB1toIPDX10RqA%2526sig%253DCg0ArKJSzFIOD9lUxf2nEAE%2526urlfix%253D1%2526adurl%253D&clickTag=' + clickThru);
+    creativeIframe.style.width = creativeWidth + 'px';
+    creativeIframe.style.height = creativeHeight + 'px';
+    creativeIframe.style.border = '0px';
+    creativeIframe.setAttribute("scrolling", "no");
+    creativeIframe.setAttribute("frameborder", "0");
+
+    if (clickThru && clickThruOverlay == 'true') {
+        clickOverlay = document.createElement('div');
+
+        clickOverlay.setAttribute("id", "html5ClickOverlay");
+        clickOverlay.style.width = creativeWidth + 'px';
+        clickOverlay.style.height = creativeHeight + 'px';
+        clickOverlay.style.float = 'right';
+        clickOverlay.style.display = 'block';
+        clickOverlay.style.position = 'absolute';
+        clickOverlay.style.cursor = "pointer";
+        clickOverlay.setAttribute("onclick", "openClickThru('" + clickThru + "')");
+
+        html5BannerDiv.appendChild(clickOverlay);
+    }
+
+    html5BannerDiv.appendChild(creativeIframe);
+
+    //Resize parent iframe to match HTML5 size
+    var parentIfrm = window.frameElement;
+    if (resizeConatiner && parentIfrm) {
+        var parentIfrmWidth = parentIfrm.width || parentIfrm.style.width;
+        var parentIfrmHeight = parentIfrm.height || parentIfrm.style.height;
+
+        //Resize parent width
+        if (parentIfrmWidth != creativeWidth) {
+            parentIfrm.width = creativeWidth;
+            parentIfrm.style.width = creativeWidth;
+        }
+        //Resize parent height
+        if (parentIfrmHeight != creativeHeight) {
+            parentIfrm.height = creativeHeight;
+            parentIfrm.style.height = creativeHeight;
+        }
+    }
+
+    // open click thru url in new tab
+    function openClickThru(clickThruURL) {
+        clickThruURL = 'https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsv9NhrL1zs5ftz6K-RuLF96H7i0LKie2Jw3sbj5f15_47VQo4XHA4nwaF59FaxIz5y5BdtOcbK1Bz5l0wvuu8DU2n4el6I0S1daglW9j1FvzOItztvYTnCu0yjRLWoONCfBED44AV8LG3IwJp7cJy_S9IwWtbCtvJFU7hWyRX2tBeAyGUtv23t9wtRyvdPR9j611TYZS3IdFISapok_7yB1toIPDX10RqA&sig=Cg0ArKJSzFIOD9lUxf2nEAE&urlfix=1&adurl=' + clickThruURL;
+        window.open(clickThruURL);
+    }
+
+    // ADD IMPRESSION TRACKING
+    var impImg = document.createElement('img');
+    impImg.setAttribute('src',  qaImpTracker+qaClickPixel);
+    document.body.appendChild(impImg);
+
+    // Build 3rd Party Impression Pixels
+    for (var index = 0; index < qa3PImpressions.length; index++){
+        if(qa3PImpressions[index].length > 10){
+            var trkPixImg = parent.document.createElement('img');
+            trkPixImg.setAttribute('src', qa3PImpressions[index]);
+            trkPixImg.setAttribute('width', "1");
+            trkPixImg.setAttribute('height', "1");
+            trkPixImg.style.position = 'absolute';
+            trkPixImg.style.visibility = 'hidden';
+            document.body.appendChild(trkPixImg);
+        }
+    }
+</script><div><iframe src="./CNN_Apple_728x90_HTML.html" scrolling="no" frameborder="0" style="width: 728px; height: 90px; border: 0px;"></iframe></div><img src="./view"><script src="./osd_listener.js.download"></script><script type="text/javascript">osdlfm(-1,'','Bqm50muwFWoHoB4X6BYqom6AOAAAAABABOAHIAQnAAgLgAgDgBAGgBh_SCAUIgGEQAQ','',226273723,true,'ud\x3d1\x26la\x3d0\x26alp\x3dxai\x26alh\x3d2474762134\x26',3,'CAASEuRoTJH8oB6bYkfG-1QxZorliw','//pagead2.googlesyndication.com/activeview?avi\x3dBqm50muwFWoHoB4X6BYqom6AOAAAAABABOAHIAQnAAgLgAgDgBAGgBh_SCAUIgGEQAQ\x26cid\x3dCAASEuRoTJH8oB6bYkfG-1QxZorliw');</script><script>if (window.top && window.top.postMessage) {window.top.postMessage('{"googMsgType":"adpnt"}','*');}</script><noscript class="MOAT-turnerdfpcwrefresh475219962180?moatClientLevel1=38386957&amp;moatClientLevel2=2153173371&amp;moatClientLevel3=4438566202&amp;moatClientLevel4=138214428940&amp;moatClientSlicer1=/8663477/CNN/homepage&amp;moatClientSlicer2=52063237&amp;zMoatTEAM=&amp;zMoatSOC=&amp;zMoatHT=90&amp;zMoatPS=bnr_btf_02&amp;zMoatPG=&amp;zMoatWD=728&amp;zMoatAPP=&amp;zMoatST=&amp;zMoatBUZ=&amp;zMoatISAPP="></noscript>
+<script type="text/javascript" src="./n.js(3).download"></script><script src="./moatad.js(5).download" type="text/javascript"></script><script type="text/javascript">
+    var images = document.documentElement.querySelectorAll("img");
+    var scripts = document.documentElement.querySelectorAll("script");
+    var iframes = document.documentElement.querySelectorAll("iframe");
+    var rawSources = {images: images, scripts: scripts, iframes: iframes};
+    var sources = [];
+    var rawSources = { images: [], scripts: [], iframes: [] };
+    var filteredSources = ['ad.atdmt', 'securepubads.g.doubleclick.net/gampad', 'pagead2.googlesyndication', 'BurstingPipe', 'BurstingScript', 'BurstingCachedScripts', 'securepubads.g.doubleclick.net', 'adsafeprotected', 'pixel', 'googletagservices', 'googleadservices', 'moatads.com', 'image/gif;', 'google.com/ads/measurement', 'doubleverify.com', 'trackingimp', 'trackimp', 'cm.g.doubleclick.net/push?'];
+    var filtered = false;
+    var y, x;
+    for (y = 0; y < images.length; y++){
+        if (images[y].src){
+            rawSources.images.push(images[y].src);
+        }
+        for (x = 0; x < filteredSources.length; x++) {
+            if (images[y].src && images[y].src != "" && images[y].src.indexOf(filteredSources[x]) >= 0) {
+                filtered = true;
+            }
+        }
+        if (filtered == false && images[y].src != ""){
+            sources.push(images[y].src);
+        }
+    }
+    filtered = false;
+    for (y = 0; y < scripts.length; y++){
+        if (scripts[y].src){
+            rawSources.images.push(scripts[y].src);
+        }
+        for (x = 0; x < filteredSources.length; x++) {
+            if (scripts[y].src && scripts[y].src != "" && scripts[y].src.indexOf(filteredSources[x]) >= 0) {
+                filtered = true;
+            }
+        }
+        if (filtered == false && scripts[y].src != ""){
+            sources.push(scripts[y].src);
+        }
+    }
+    filtered = false;
+    for (y = 0; y < iframes.length; y++){
+        if (iframes[y].src){
+            rawSources.images.push(iframes[y].src);
+        }
+        for (x = 0; x < filteredSources.length; x++) {
+            if (iframes[y].src && iframes[y].src != "" && iframes[y].src.indexOf(filteredSources[x]) >= 0) {
+                filtered = true;
+            }
+        }
+        if (filtered == false && iframes[y].src != ""){
+            sources.push(iframes[y].src);
+        }
+    }
+    if (window.top && window.top.postMessage) {
+        window.top.postMessage('{"pos": "bnr_btf_02", "divId": "ad_bnr_btf_02", "adUnit": "/8663477/CNN/homepage", "filteredSources": ' + JSON.stringify(sources) + ', "rawSources": ' + JSON.stringify(rawSources) + ' }', '*');
+    }
+</script></body></html>

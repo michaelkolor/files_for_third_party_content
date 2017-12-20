@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+ <!--*********************************USE THIS PAGE FOR TEST CASES IF NEED BE, A MARKUP PAGE**********************************-->
+  <head>
+  <!--Add JQuery Library -->
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="jquery-1.11.3,min.js"></script>
+  <script src="jquery.form.js"></script>
+
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 268px;
+    margin-top: 100px;
+    /*margin-bottom: 100px; */
+    margin-right: 150px;
+    margin-left: 80px;
+    }
+    img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+</style>
+
+    <!-- Code for jQuert form plug-in -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script>
+        // wait for the DOM to be loaded
+        $(document).ready(function() {
+            // bind 'myForm' and provide a simple callback function
+            $('#myForm').ajaxForm(function() {
+                alert("Thank you for your comment!");
+            });
+        });
+    </script>
+
+  </head>
+  <body>
+    <!-- Form to try out form plug-in UPDATE SECURITY -->
+    <form id="myForm" action="test.php" method="post">
+      Div 1:<input type="radio" name="div_1" value="yes" required> Yes, it is third-Party Content
+        <input type="radio" name="div_1" value="no"> No <br>
+      Div 2:<input type="radio" name="div_2" value="yes" required> Yes, it is third-Party Content
+        <input type="radio" name="div_2" value="no"> No <br>
+      Div 3:<input type="radio" name="div_3" value="yes" required> Yes, it is third-Party Content
+        <input type="radio" name="div_3" value="no"> No <br>
+      Div 4:<input type="radio" name="div_4" value="yes" required> Yes, it is third-Party Content
+        <input type="radio" name="div_4" value="no"> No <br>
+      Div 5:<input type="radio" name="div_5" value="yes" required> Yes, it is third-Party Content
+        <input type="radio" name="div_5" value="no"> No <br>
+      Rate Your Comfort with this Form (1 least comfortable, 5 most):<input type="radio" name="comfort" value="yes" required> 1
+        <input type="radio" name="comfort" value="no"> 2
+        <input type="radio" name="comfort" value="no"> 3
+        <input type="radio" name="comfort" value="no"> 4
+        <input type="radio" name="comfort" value="no"> 5 <br>
+      <input type="submit" value="Submit Comment" name="form_submitted" value="0" />
+    </form>
+
+    <!--Try and Scrape advertisement -->
+    <!--    <img src = "https://s2.adform.net/Banners/Elements/Files/165234/2334135/bvpath_258/#" alt="why" onclick="window.location.href = 'indexNew.html'"></img>     -->
+    <img src="https://tpc.googlesyndication.com/simgad/3730324607678836097" border="0" width="200" alt="" class="img_ad">
+    <input id="id1" type="number" min="100" max="300" required>
+      <button onclick="myFunction()">OK</button>
+      <!-- FAKE FAKE DOWNLOAD LINK -->
+      <img src="fake_download_button_2.JPG" style="display:block;position:absolute;top:0px;left:0px;width:200px;height:104px;">
+
+
+      <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+      <p id="demo"></p>
+
+      <!-- Jquery Tester -->
+      <script>
+      $(document).ready(function(){
+        $('#test').click(function(){
+         window.location.href='indexNew.html';
+         return false;
+        })
+      });
+       </script>
+
+      <button id="test">Test</button>
+
+      <script>
+      function myFunction() {
+          var inpObj = document.getElementById("id1");
+          if (inpObj.checkValidity() == false) {
+              document.getElementById("demo").innerHTML = inpObj.validationMessage;
+          } else {
+              document.getElementById("demo").innerHTML = "Input OK";
+              window.location.href = "popup.html";
+          }
+      }
+      </script>
+
+      <a href = "popup.html">
+        <img src="test.gif" alt="Oops!" width="268px" height="268px"><br>Click the image for a free prize!!</br> </img>
+      </a>
+      <!--MOUSEFLOW INJECTION -->
+      <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.async = true;
+          mf.src = "//cdn.mouseflow.com/projects/2cfcbc3f-8878-4632-970a-847e57333948.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+      </script>
+
+
+
+      <!--Popup Test -->
+      <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Sign in</a>
+      <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+          <form>
+              <div style="padding:10px 20px;">
+                  <h3>Please sign in</h3>
+                  <label for="un" class="ui-hidden-accessible">Username:</label>
+                  <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
+                  <label for="pw" class="ui-hidden-accessible">Password:</label>
+                  <input type="password" name="pass" id="pw" value="" placeholder="password" data-theme="a">
+                  <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+              </div>
+          </form>
+      </div>
+      <!-- Start of BotEngine (www.botengine.ai) code -->
+      <script type="text/javascript">
+          window.__be = window.__be || {};
+          window.__be.id = "59fcb8eb6a0e580007a2688d";
+          (function() {
+              var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+              be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.botengine.ai/widget/plugin.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+          })();
+      </script>
+      <!-- End of BotEngine code -->
+  </body>
+  <button style="{right: 0px; background-color: #f44336;}" onclick="function2()">Ooo look at me!!</button>
+
+  <script> function function2() {
+    alert("Click again to win $50!")
+  }
+  </script>
+</html>

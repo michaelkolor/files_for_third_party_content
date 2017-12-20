@@ -1,0 +1,66 @@
+/**************CNN*****************************
+**HELPFUL_WEBSITES:**W3_SCHOOLS_CSS_SELECTOS***/
+
+/* First Selector */
+.ad.ad--epic.ad--desktop img, .ad.ad--epic.ad--all img{
+    display: block;
+    border-style: dotted;
+    border-width: 10px;
+    border-color: yellow;
+}
+
+/*Paid Content */
+.ob-unit.ob-rec-text, .ob-unit.ob-rec-source
+{
+  display: block;
+  border-style: dotted;
+  border-width: 10px;
+  border-color: yellow;
+}
+
+/*div[id="google_ads_iframe THIS CREATES A LOT OF DOUBLE POSITIVES BUT DOES
+HAVE A USEFUL CASE SO COME BACK TO THIS */
+iframe[id*="google_ads_iframe"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+img:not([src*="cnn"]){
+  display: block;
+  border-style: dotted;
+  border-width: 10px;
+  border-color: yellow;
+}
+
+/* Paid Partner Content Divs*/
+.cn.cn-list-hierarchical-xs.cn--idx-0.cn-container_F7A7C6CB-A485-656A-53BC-0E72C01AA954,
+.cn.cn-list-hierarchical-xs.cn--idx-1.cn-container_2782C209-11BE-8C77-05A1-30CA734A6A9E,
+.cn.cn-list-hierarchical-xs.cn--idx-2.cn-container_A92A6D81-E960-9B7C-2DAF-ACA89649E60F,
+.cn.cn-list-xs.cn--idx-3.cn-container_B0E3090D-4FD6-BC2D-13FC-37DB47916A93.cn--expandable.cn--collapsed,
+.cn.cn-list-xs.cn--idx-4.cn-container_A80BCBE3-7179-7D4C-536B-78836CB55728.cn--expandable.cn--collapsed,
+.cn.cn-list-xs.cn--idx-5.cn-container_FA322458-DDDE-69E6-D80D-AA0633B09021.cn--expandable.cn--collapsed,
+.cn.cn-list-xs.cn--idx-6.cn-container_383D0BD6-1622-977C-332C-5B1168301B65.cn--expandable.cn--collapsed,
+.cn.cn-list-xs.cn--idx-7.cn-container_245988C2-8CAE-2169-22B1-5B10FEFB667B.cn--expandable.cn--collapsed,
+.cn.cn-list-xs.cn--idx-8.cn-container_2F48A25D-07AB-8752-1881-D83FF894E875.cn--expandable.cn--collapsed {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: yellow !important;
+}
+
+/*Isolated Paid Partner Content Box */
+.cd.cd--card.cd--hyperlink.cd--idx-9.cd--extra-small.cd--has-siblings.cd--media__image {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+[data-analytics*="tool-type_list-xs"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}

@@ -1,0 +1,79 @@
+/**************FACEBOOK*****************************
+**HELPFUL_WEBSITES:**W3_SCHOOLS_CSS_SELECTOS***/
+
+iframe{
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+img:not([src*="fbcdn.net"]) img:not([src*="facebook"]), img[src*="php?"] img[src*="www"], [src*="//external"]{
+  display: block;
+  border-style: dotted;
+  border-width: 10px;
+  border-color: yellow;
+}
+
+[data-referrer*="trending_tags_and_topics"] {
+    display: block;
+    border-style: dotted;
+    border-width: 10px;
+    border-color: yellow;
+}
+
+/****[data-lynx-uri*="php?"] [data-lynx-uri*="www"]****NOT WORKING**u=
+a[href*="php?u="][href*="www"], a[href*="php?u="][href*="www"]:hover {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}*/
+
+
+
+a[href*="php?u="], a[href^="/commerce"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+/*TEST HOVER TO OVERWRITE ISSUES --> Update: deemed unnecessary^
+a[href*="php?u="]:hover, a[href^="/commerce"]:hover {
+   display: block;
+   background-color: yellow;
+   border-style: dotted !important;
+   border-width: 10px !important;
+   border-color: yellow !important;
+}
+*/
+
+[href*="source=whfrt"] {
+     block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+}
+
+/*Video catch attempt
+[src*="blob"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: yellow !important;
+} */
+
+[href*=".org"]) {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: yellow !important;
+}
+
+div .ego_section {
+    display: block;
+    border-style: dotted;
+    border-width: 10px;
+    border-color: yellow;
+}

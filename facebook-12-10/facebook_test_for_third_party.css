@@ -1,0 +1,46 @@
+/**************CNN  STYLINGS*****************************
+**HELPFUL_WEBSITES:**W3_SCHOOLS_CSS_SELECTOS***/
+
+/*TEST FOR ASKING QUESTIONS AND RECEIVING DATA */
+
+._1-ia._11qy {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: blue !important;
+}
+
+div[id="pagelet_trending_tags_and_topics"] {
+    display: block;
+    border-style: dotted !important;
+    border-width: 10px !important;
+    border-color: blue !important;
+}
+
+div[title="Instant Games"] {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
+
+div[id="6084609838936-id_5a32da8b69baf1b13453184"] {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
+
+[data-referrer="hyperfeed_story_id_5a32d8dea44af9f76499310"] {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
+
+[data-testid="chat_sidebar"] {
+  display: block;
+  border-style: dotted !important;
+  border-width: 10px !important;
+  border-color: blue !important;
+}
